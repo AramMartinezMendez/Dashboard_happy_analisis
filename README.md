@@ -22,5 +22,11 @@ El dataset contiene 1,502 registros distribuidos a lo largo de 10 años (2015–
 
 ### Planificación de ETL 
 ##### Limpieza de Datos
-Formato numérico: Las columnas con decimales utilizan coma (,) como separador en lugar de punto (.). Se debe aplicar una conversión de texto a coma flotante (float).Valores Faltantes: Se identificaron 3 registros con valor nulo en Regional indicator. 
-El proceso de limpieza consistirá en imputar la región consultando el historial previo del país correspondiente o mediante un mapeo directo según su denominación.Manejo de Valores Atípicos (Outliers)Criterio de Evaluación: Aplicación del rango intercuartílico ($IQR$) en variables como GDP per capita, Social support o Perceptions of corruption.Decisión Estratégica: Conservar los valores extremos en el modelo del dashboard sin eliminarlos, ya que reflejan condiciones socioeconómicas reales (e.g., países con alta percepción de corrupción o crisis económicas profundas). En su lugar, se configurarán rangos dinámicos en los gráficos para evitar distorsiones visuales.Integración de DatosCarga del archivo CSV estructurado con separador ;.Creación de una tabla relacional o modelo dimensional con dimensiones de Tiempo (Year), Geografía (Country, Regional indicator) y Hechos (métricas numéricas de bienestar) para optimizar las consultas del dashboard estratégico.
+Formato numérico: Las columnas con decimales utilizan coma (,) como separador en lugar de punto (.). Se debe aplicar una conversión de texto a coma flotante (float). Valores Faltantes: Se identificaron 3 registros con valor nulo en Regional indicator. 
+El proceso de limpieza consistirá en imputar la región consultando el historial previo del país correspondiente o mediante un mapeo directo según su denominación.
+
+##### Manejo de Valores Atípicos (Outliers)
+Criterio de Evaluación: Aplicación del rango intercuartílico ($IQR$) en variables como GDP per capita, Social support o Perceptions of corruption. Decisión Estratégica: Conservar los valores extremos en el modelo del dashboard sin eliminarlos, ya que reflejan condiciones socioeconómicas reales (e.g., países con alta percepción de corrupción o crisis económicas profundas). En su lugar, se configurarán rangos dinámicos en los gráficos para evitar distorsiones visuales.
+
+##### Integración de Datos
+Carga del archivo CSV estructurado con separador ;.Creación de una tabla relacional o modelo dimensional con dimensiones de Tiempo (Year), Geografía (Country, Regional indicator) y Hechos (métricas numéricas de bienestar) para optimizar las consultas del dashboard estratégico.
