@@ -5,6 +5,18 @@
 ### Análisis de Audiencia
 ##### Usuarios Principales: Directores ejecutivos, tomadores de decisiones del sector público/ONGs, investigadores socioeconómicos y analistas de política global.
 
+### Definición de objetivos 
+¿Qué factores socioeconómicos han impulsado o deteriorado el bienestar social global en la década 2015-2024, y qué regiones requieren mayor focalización de recursos estratégicos?
+
+• Objetivo General:
+Proporcionar una herramienta visual estratégica que analice la tendencia multianual (2015-2024) y el impacto de los pilares socioeconómicos en el índice de felicidad mundial para guiar la toma de decisiones directivas y la planificación de políticas públicas.
+
+• Objetivos Específicos:
+  1. Identificar patrones y tendencias históricas en el nivel de bienestar global durante el periodo 2015-2024.
+  2. Medir la fuerza de asociación entre el nivel de felicidad y las variables socioeconómicas (PIB, apoyo social, esperanza de vida, libertad, corrupción y generosidad).
+  3. Realizar benchmarking regional para identificar disparidades estructurales entre los bloques geográficos.
+  4. Sintetizar métricas complejas en indicadores visuales de alto nivel (KPIs) diseñados para la toma de decisiones ejecutivas.
+
 ### Tipo de información y decisiones
 ##### Toma de Decisiones:
 - Evaluación del impacto a largo plazo de políticas públicas, asignación estratégica de recursos y presupuestos de desarrollo humano.
