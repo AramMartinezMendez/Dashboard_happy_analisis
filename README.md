@@ -30,3 +30,26 @@ Criterio de Evaluación: Aplicación del rango intercuartílico ($IQR$) en varia
 
 ##### Integración de Datos
 Carga del archivo CSV estructurado con separador ;.Creación de una tabla relacional o modelo dimensional con dimensiones de Tiempo (Year), Geografía (Country, Regional indicator) y Hechos (métricas numéricas de bienestar) para optimizar las consultas del dashboard estratégico.
+
+
+
+#####
+Cosas a considerar (Estructura):
+
+Estandarizar datos hay valores numericas con punto y coma, otras con punto o solamente coma.
+Valores de errores geograficas(dice que grecia es de africa xd) entre otras ubicaciones. 
+
+
+
+##### Consideraciones de identificadores claves:
+Ranking  — posición ordinal
+
+Country  — dimensión principal
+
+Regional indicator — dimensión geopolítica clave para segmentació
+
+
+
+
+
+
