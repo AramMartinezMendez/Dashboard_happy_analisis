@@ -1,0 +1,109 @@
+
+/* ============================================
+   HAPPY WORLD — SISTEMA DE TEMAS (Claro/Oscuro)
+   ============================================ */
+
+:root,
+[data-theme="light"] {
+  --color-primary: #2D8B7A;
+  --color-primary-light: #E8F5F2;
+  --color-primary-dark: #1A5C5C;
+  --color-secondary: #E8793A;
+  --color-secondary-light: #FDE8D0;
+  --color-success: #27AE60;
+  --color-danger: #E74C3C;
+
+  --bg-body: #F5F5F5;
+  --bg-sidebar: #1A2332;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FAFAFA;
+  --bg-input: #FFFFFF;
+  --bg-tooltip: #2D2D2D;
+
+  --border-card: #E5E5E5;
+  --border-input: #D1D5DB;
+
+  --text-primary: #2D2D2D;
+  --text-secondary: #888888;
+  --text-muted: #AAAAAA;
+  --text-inverse: #FFFFFF;
+  --text-sidebar: #FFFFFF;
+  --text-sidebar-muted: #8899AA;
+  --text-tooltip: #FFFFFF;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  --chart-grid: #E5E5E5;
+  --chart-axis: #888888;
+  --chart-area-opacity: 0.15;
+
+  --map-land: #E0E0E0;
+  --map-border: #FFFFFF;
+  --map-hover: #D0D0D0;
+
+  --kpi-primary-bg: linear-gradient(135deg, #1A5C5C, #2D8B7A);
+  --kpi-primary-text: #FFFFFF;
+
+  --theme-transition: 0.3s ease;
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 50%;
+
+  --sidebar-width: 260px;
+  --header-height: 64px;
+}
+
+[data-theme="dark"] {
+  --color-primary: #3ECFB4;
+  --color-primary-light: #1A3D35;
+  --color-primary-dark: #2D8B7A;
+  --color-secondary: #F5924D;
+  --color-secondary-light: #3D2A1A;
+  --color-success: #2ECC71;
+  --color-danger: #FF6B6B;
+
+  --bg-body: #0D1117;
+  --bg-sidebar: #010409;
+  --bg-card: #161B22;
+  --bg-card-hover: #1C2333;
+  --bg-input: #0D1117;
+  --bg-tooltip: #F5F5F5;
+
+  --border-card: #30363D;
+  --border-input: #30363D;
+
+  --text-primary: #E6EDF3;
+  --text-secondary: #8B949E;
+  --text-muted: #6E7681;
+  --text-inverse: #FFFFFF;
+  --text-sidebar: #E6EDF3;
+  --text-sidebar-muted: #6E7681;
+  --text-tooltip: #2D2D2D;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.6);
+
+  --chart-grid: #30363D;
+  --chart-axis: #8B949E;
+  --chart-area-opacity: 0.25;
+
+  --map-land: #21262D;
+  --map-border: #30363D;
+  --map-hover: #2A3140;
+
+  --kpi-primary-bg: linear-gradient(135deg, #0D2B26, #1A3D35);
+  --kpi-primary-text: #3ECFB4;
+}
+

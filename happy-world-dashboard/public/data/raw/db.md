@@ -1,0 +1,1 @@
+todo los csv sin procesrco ETL

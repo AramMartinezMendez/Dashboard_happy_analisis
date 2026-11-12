@@ -1,0 +1,33 @@
+{
+  "total_rows": 1502,
+  "total_columns": 19,
+  "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "unique_countries": 168,
+  "unique_regions": 10,
+  "remaining_nulls": 140,
+  "countries_per_year": {
+    "2015": 158,
+    "2016": 157,
+    "2017": 155,
+    "2018": 155,
+    "2019": 155,
+    "2020": 152,
+    "2021": 148,
+    "2022": 145,
+    "2023": 137,
+    "2024": 140
+  },
+  "generated_at": "2026-11-12T02:08:50.033910",
+  "output_file": "public/data/processed\\happiness_consolidated.csv"
+}

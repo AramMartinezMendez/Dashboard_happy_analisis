@@ -1,0 +1,218 @@
+
+/* ═══════════════════════════════════════════
+   DASHBOARD GRID LAYOUT
+   ═══════════════════════════════════════════ */
+
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.grid {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  flex: 1;
+}
+
+/* ── Fila 1: KPI Cards ── */
+.kpiRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* ── Fila 2: Charts Top ── */
+.chartsRowTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* ── Fila 3: Charts Bottom ── */
+.chartsRowBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: var(--spacing-lg);
+}
+
+/* ── Card genérica de gráfico ── */
+.chartCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-lg);
+  transition: box-shadow var(--theme-transition);
+}
+.chartCard:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+.chartCard h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Mapa (más grande) ── */
+.mapCard {
+  min-height: 350px;
+}
+
+/* ── Loading / Error ── */
+.loading, .error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+.error { color: var(--color-danger); }
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .chartsRowTop,
+  .chartsRowBottom {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mapCard {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+  }
+  .kpiRow,
+  .chartsRowTop,
+  .chartsRowBottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ═══════════════════════════════════════════
+   DASHBOARD GRID LAYOUT
+   ═══════════════════════════════════════════ */
+
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.grid {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  flex: 1;
+}
+
+/* ── Fila 1: KPI Cards ── */
+.kpiRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* ── Fila 2: Charts Top ── */
+.chartsRowTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* ── Fila 3: Charts Bottom ── */
+.chartsRowBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: var(--spacing-lg);
+}
+
+/* ── Card genérica de gráfico ── */
+.chartCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-lg);
+  transition: box-shadow 0.3s ease;
+}
+.chartCard:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+.chartCard h3 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Mapa (más grande) ── */
+.mapCard {
+  min-height: 350px;
+}
+
+/* ── Loading / Error ── */
+.loading, .error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+.error {
+  color: var(--color-danger);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .chartsRowTop,
+  .chartsRowBottom {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mapCard {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+  }
+  .kpiRow,
+  .chartsRowTop,
+  .chartsRowBottom {
+    grid-template-columns: 1fr;
+  }
+}
+
