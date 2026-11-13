@@ -16,7 +16,7 @@ export default function RadarChartComponent({ data }) {
   ];
 
   return (
-    <ResponsiveContainer width="100%" height={280}>
+    <ResponsiveContainer width="100%" height={200}>
       <RadarChart data={radarData}>
         <PolarGrid stroke="var(--chart-grid)" />
         <PolarAngleAxis

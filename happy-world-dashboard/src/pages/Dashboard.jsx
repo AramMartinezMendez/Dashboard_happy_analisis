@@ -133,7 +133,7 @@ export default function Dashboard() {
           <section
             style={{
               display: "grid",
-              gridTemplateColumns: "1.2fr 1fr 1fr",
+              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
               gap: "var(--spacing-lg)",
             }}
           >
@@ -142,7 +142,7 @@ export default function Dashboard() {
               value={kpis?.happinessScore}
               max={10}
               delta={kpis?.happinessDelta}
-              deltaLabel="vs. anio anterior"
+              deltaLabel="vs. año anterior"
             />
             <KPICard
               title="Posicion Global"
@@ -162,56 +162,80 @@ export default function Dashboard() {
             />
           </section>
 
-          {/* ═══ FILA 2: GRÁFICOS SUPERIORES ═══ */}
+          {/* ═══ ZONA DE GRÁFICOS (BENTO GRID 3x3) ═══ */}
           <section
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr 1fr",
+              gridTemplateRows: "auto auto auto", // 👈 Cambia 1fr 1fr por auto auto
               gap: "var(--spacing-lg)",
+              alignItems: "stretch",
+              gridTemplateAreas: `
+                "radar   line    scatter"
+                "bar     map     map"
+                "ranking map     map"
+              `,
             }}
           >
-            <div style={card}>
+            {/* Fila 1: 3 gráficos superiores */}
+            <div style={{ ...card, gridArea: "radar" }}>
               <h3 style={cardTitle}>Perfil de Bienestar</h3>
               <RadarChartComponent data={countryData} />
             </div>
-            <div style={card}>
+
+            <div style={{ ...card, gridArea: "line" }}>
               <h3 style={cardTitle}>Evolucion de la Felicidad</h3>
               <LineChartComponent
                 data={countryTimeSeries}
                 currentYear={year}
               />
             </div>
-            <div style={card}>
+
+            <div style={{ ...card, gridArea: "scatter" }}>
               <h3 style={cardTitle}>Prosperidad y Felicidad</h3>
               <ScatterChartComponent
                 data={filteredData}
                 highlightCountry={country}
               />
             </div>
-          </section>
 
-          {/* ═══ FILA 3: GRÁFICOS INFERIORES ═══ */}
-          <section
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1.5fr",
-              gap: "var(--spacing-lg)",
-            }}
-          >
-            <div style={card}>
+            {/* Columna izquierda abajo: 2 bloques apilados */}
+            <div style={{ ...card, gridArea: "bar" }}>
               <h3 style={cardTitle}>Factores de Cohesion</h3>
               <BarChartComponent data={countryData} />
             </div>
-            <div style={card}>
-              <h3 style={cardTitle}>Clasificacion Regional</h3>
-              <RegionalRanking
-                data={regionalRanking}
-                currentCountry={country}
-              />
+
+            <div
+              style={{
+                ...card,
+                gridArea: "ranking",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h3 style={cardTitle}>Clasificación Regional</h3>
+              {/* Contenedor compacto con scroll interno */}
+              <div style={{ maxHeight: "210px", overflowY: "auto", paddingRight: "4px" }}>
+                <RegionalRanking
+                  data={regionalRanking}
+                  currentCountry={country}
+                />
+              </div>
             </div>
-            <div style={{ ...card, minHeight: "350px" }}>
+
+            {/* Bloque grande 2x2 abajo a la derecha */}
+            <div
+              style={{
+                ...card,
+                gridArea: "map",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <h3 style={cardTitle}>Mapa Geografico del Bienestar</h3>
-              <WorldMap data={mapData} highlightCountry={country} />
+              <div style={{ flex: 1 }}>
+                <WorldMap data={mapData} highlightCountry={country} />
+              </div>
             </div>
           </section>
         </main>

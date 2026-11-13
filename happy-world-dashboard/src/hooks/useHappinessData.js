@@ -18,7 +18,7 @@ export function useHappinessData() {
 
   // ── CARGAR CSV ──
   // ⚠️ CAMBIA EL NOMBRE AQUÍ si tu archivo se llama diferente
-  const CSV_PATH = "/data/happiness_.csv";
+  const CSV_PATH = "/data/happiness_final.csv";
 
 
   useEffect(() => {

@@ -21,8 +21,8 @@ export default function BarChartComponent({ data }) {
   };
 
   return (
-    <ResponsiveContainer width="100%" height={280}>
-      <BarChart data={barData} layout="vertical" margin={{ top: 5, right: 30, left: 80, bottom: 5 }}>
+    <ResponsiveContainer width="100%" height={200}>
+      <BarChart data={barData} layout="vertical" margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid)" horizontal={false} />
         <XAxis
           type="number" domain={[0, 100]}
