@@ -142,13 +142,18 @@ export function useHappinessData() {
   );
 
   // ── Top regional (para tabla) ──
-  const regionalRanking = useMemo(() =>
-    rawData
-      .filter(r => r.year === filters.year && r.region === filters.region && r.happiness_score != null)
+  const regionalRanking = useMemo(() => {
+    const isAllRegions = !filters.region || filters.region === "Todas";
+
+    return rawData
+      .filter(r =>
+        r.year === filters.year &&
+        (isAllRegions || r.region === filters.region) &&
+        r.happiness_score != null
+      )
       .sort((a, b) => b.happiness_score - a.happiness_score)
-      .slice(0, 10),
-    [rawData, filters.year, filters.region]
-  );
+      .slice(0, isAllRegions ? 25 : 10); // Muestra el Top 25 global si es "Todas", o Top 10 si es una región
+  }, [rawData, filters.year, filters.region]);
 
   // ── Datos para mapa ──
   const mapData = useMemo(() =>
