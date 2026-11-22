@@ -61,9 +61,11 @@ Country  — dimensión principal
 Regional indicator — dimensión geopolítica clave para segmentació
 
 
-### (Dashboard en linea)[http://dashboardhappyanalisis.vercel.app/]
+### [Dashboard en linea](http://dashboardhappyanalisis.vercel.app/)
 
-### (Encuesta de dashboard)[https://docs.google.com/forms/d/e/1FAIpQLScmPMNpklfIPmyn8e2iTEiiz088q-juOfqyBIIGgXyth-ZCiQ/viewform?usp=header]
+### [Encuesta de dashboard](https://docs.google.com/forms/d/e/1FAIpQLScmPMNpklfIPmyn8e2iTEiiz088q-juOfqyBIIGgXyth-ZCiQ/viewform?usp=header)
+
+
 
 
 
